@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IPL Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="side" id="side">
+      <div class="brand"><span class="logo">IPL</span><span>Management<br><small>DBMS mini project</small></span></div>
+      <nav id="nav"></nav>
+    </aside>
+
+    <div class="main">
+      <header class="top">
+        <button class="btn ghost menu" id="menuBtn" aria-label="Menu">☰</button>
+        <h1 id="pageTitle">Dashboard</h1>
+        <label class="season-pick">Season
+          <select id="seasonSel"></select>
+        </label>
+      </header>
+      <main id="view" class="view"><p class="muted">Loading…</p></main>
+    </div>
+  </div>
+
+  <!-- Show SQL panel -->
+  <section class="sqlbar" id="sqlbar">
+    <button class="sqlbar-head" id="sqlToggle">
+      <span class="chev">▸</span> <b>Show SQL</b>
+      <span class="muted" id="sqlCount">no queries yet</span>
+    </button>
+    <div class="sqlbar-body" id="sqlBody"></div>
+  </section>
+
+  <dialog id="dlg"></dialog>
+  <div id="toasts" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
